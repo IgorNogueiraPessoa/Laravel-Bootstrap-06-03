@@ -8,12 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
-<style>
-    .prime-color {
-        background-color: #0d6efd !important;
-        color: #0d6efd !important;
-    }
-</style>
 
 <body>
 
@@ -46,11 +40,12 @@
                 </p>
             </div>
 
-            <div class="col">
-                <div class="row">
-                    <table class="table ">
-                        <thead class="table-primary">
-                            <tr>
+
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-primary">
                                 <th scope="col">Nome</th>
                                 <th scope="col">Endereço</th>
                                 <th scope="col">Bairro</th>
@@ -79,23 +74,12 @@
                                 <td>SP</td>
                                 <td>Nenhuma</td>
                             </tr>
-                            <tr>
-                                <td>Maria de Fátima</td>
-                                <td>Rua do Outro Lado</td>
-                                <td>Ponte Rasa</td>
-                                <td>03677010</td>
-                                <td>São Paulo</td>
-                                <td>SP</td>
-                                <td>Nenhuma</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
