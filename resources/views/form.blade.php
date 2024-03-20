@@ -42,6 +42,8 @@
  
             <div class="row">
                 <div class="mb-3">
+                <form method="POST" action="/adicionarContato">
+                 @csrf
                     <label for="exampleFormControlInput1" class="form-label">Nome:</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1">
                     <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
@@ -63,6 +65,7 @@
             <div class="col">
                 <button type="button" class="btn btn-primary">Cadastrar</button>
             </div>
+           </form>
         </div>
     </div>
  
