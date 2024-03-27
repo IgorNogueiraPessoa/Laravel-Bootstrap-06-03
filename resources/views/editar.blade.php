@@ -42,28 +42,28 @@
  
             <div class="row">
                 <div class="mb-3">
-                <form method="POST" action="/editar">
+                <form method="POST" action="/atualizar/{{$contato->id}}">
                  @csrf
                     <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" name="nome">
+                    <input type="text" class="form-control" name="nome" value="{{$contato->nome}}">
                     <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
-                    <input type="text" class="form-control" name="telefone">
+                    <input type="text" class="form-control" name="telefone" value="{{$contato->telefone}}">
                     <label for="exampleFormControlInput1" class="form-label">Origem:</label>
-                    <select class="form-select" name="origem" aria-label="Default select example">
+                    <select class="form-select" name="origem" aria-label="Default select example" value="{{$contato->origem}}">
                         <option selected>Selecionar</option>
                         <option value="1">Telefone fixo</option>
                         <option value="2">Telefone celular</option>
                     </select>
                     <label for="exampleFormControlInput1" class="form-label">Data de contato:</label>
-                    <input type="date" class="form-control" name="data_contato">
+                    <input type="date" class="form-control" name="data_contato" value="{{$contato->data_contato}}">
                     <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
-                    <textarea class="form-control" name="observação" rows="3"></textarea>
+                    <textarea class="form-control" name="observação" rows="3" value="{{$contato->observação}}"></textarea>
  
                 </div>
             </div>
  
             <div class="col">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Atualizar</button>
             </div>
            </form>
         </div>
