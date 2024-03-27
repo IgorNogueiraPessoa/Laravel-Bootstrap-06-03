@@ -45,25 +45,25 @@
                 <form method="POST" action="/adicionarContato">
                  @csrf
                     <label for="exampleFormControlInput1" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <input type="text" class="form-control" name="nome">
                     <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <input type="text" class="form-control" name="telefone">
                     <label for="exampleFormControlInput1" class="form-label">Origem:</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name="origem" aria-label="Default select example">
                         <option selected>Selecionar</option>
                         <option value="1">Telefone fixo</option>
                         <option value="2">Telefone celular</option>
                     </select>
                     <label for="exampleFormControlInput1" class="form-label">Data de contato:</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1">
+                    <input type="date" class="form-control" name="data_contato">
                     <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="observação" rows="3"></textarea>
  
                 </div>
             </div>
  
             <div class="col">
-                <button type="button" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
             </div>
            </form>
         </div>

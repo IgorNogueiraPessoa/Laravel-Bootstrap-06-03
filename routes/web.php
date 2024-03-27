@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContatoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,9 @@ Route::get('/form', function () {
 Route::get('/list', function () {
     return view('list');
 });
+
+Route::get("/", [ContatoController::class, "index"]);
+Route::post("/adicionarContato", [ContatoController::class, "adicionar"]);
+Route::get("/editar/{id}", [ContatoController::class, "editar"]);
+Route::get("/atualizar/{id}", [ContatoController::class, "atualizar"]);
+Route::get("/excluir/{id}", [ContatoController::class, "excluir"]);
