@@ -13,13 +13,18 @@ class ContatoController extends Controller
         return view('form')->with("contato", $contato);
     }
 
+    public function listar(Request $req){
+        $contato = Contato::all();
+        return view('list')->with("contato", $contato);
+    }
+
     public function adicionar(Request $req){
         $contato = new Contato;
         $contato->nome = $req->nome;
         $contato->telefone = $req->telefone;
         $contato->origem = $req->origem;
         $contato->data_contato = $req->data_contato;
-        $contato->observação = $req->observação;
+        $contato->observacao = $req->observacao;
         $contato->save();
         return redirect()->back();
     }
@@ -27,21 +32,21 @@ class ContatoController extends Controller
     //select * from where....
     public function editar(Request $req){
         $contato = Contato::find($req->id);
-        return view('editar')->with("contato",$contato);
+        return view('editar')->with("contato", $contato);
     }
 
     public function atualizar(Request $req){
         $contato = Contato::find($req->id);
-        $contato>update(
+        $contato->update(
         [
             "nome" => $req->nome,
             "telefone" => $req->telefone,
             "origem" => $req->origem,
             "data_contato" => $req->data_contato,
-            "observação" => $req->observação
+            "observacao" => $req->observacao
         ]    
         );
-        return redirect()->back;
+        return redirect()->back();
     }
 
     public function excluir(Request $req){

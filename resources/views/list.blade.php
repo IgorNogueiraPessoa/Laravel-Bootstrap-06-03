@@ -24,8 +24,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link" href="#">Cadastrar</a>
-                                <a class="nav-link" href="#">Consultar</a>
+                                <a class="nav-link" href="/form">Cadastrar</a>
+                                <a class="nav-link" href="/list">Consultar</a>
                             </div>
                         </div>
                     </div>
@@ -46,34 +46,34 @@
                     <table class="table">
                         <thead>
                             <tr class="table-primary">
+                            <th scope="col">Id</th>
                                 <th scope="col">Nome</th>
-                                <th scope="col">Endereço</th>
-                                <th scope="col">Bairro</th>
-                                <th scope="col">Cep</th>
-                                <th scope="col">Cidade</th>
-                                <th scope="col">Estado</th>
-                                <th scope="col">Ação</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Origem</th>
+                                <th scope="col">Data Contato</th>
+                                <th scope="col">Observação</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @if (count($contato) > 0)
+                            @foreach ($contato as $cont)
                             <tr>
-                                <td>Edson Nunes</td>
-                                <td>Rua de Algum Lugar</td>
-                                <td>Tres Marias</td>
-                                <td>03677090</td>
-                                <td>São Paulo</td>
-                                <td>SP</td>
-                                <td>Nenhuma</td>
+                                <th>{{ $cont->id }}</th>
+                                <th>{{ $cont->nome }}</th>
+                                <th>{{ $cont->telefone}}</th>
+                                <th>{{ $cont->origem }}</th>
+                                <th>{{ $cont->data_contato }}</th>
+                                <th>{{ $cont->observacao }}</th>
+                                <th><a href="/editar/{{ $cont->id }}" class="btn btn-primary">Editar</a>
+                                    <a href="/excluir/{{ $cont->id }}" class="btn btn-danger">Excluir</a>
+                                </th>
                             </tr>
+                            @endforeach
+                            @else
                             <tr>
-                                <td>Josué Freitas</td>
-                                <td>Rua de Algum Outro Lugar</td>
-                                <td>Buro Paulista</td>
-                                <td>03677080</td>
-                                <td>São Paulo</td>
-                                <td>SP</td>
-                                <td>Nenhuma</td>
+                                <th>Sem registros!</th>
                             </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>

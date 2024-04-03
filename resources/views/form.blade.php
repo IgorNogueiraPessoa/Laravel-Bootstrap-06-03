@@ -24,8 +24,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link" href="#">Cadastrar</a>
-                                <a class="nav-link" href="#">Consultar</a>
+                                <a class="nav-link" href="/form">Cadastrar</a>
+                                <a class="nav-link" href="/list">Consultar</a>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Data de contato:</label>
                     <input type="date" class="form-control" name="data_contato">
                     <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
-                    <textarea class="form-control" name="observação" rows="3"></textarea>
+                    <textarea class="form-control" name="observacao" rows="3"></textarea>
  
                 </div>
             </div>

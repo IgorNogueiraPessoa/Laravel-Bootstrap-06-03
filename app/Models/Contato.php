@@ -14,7 +14,7 @@ class Contato extends Model
         "telefone",
         "origem",
         "data_contato",
-        "observação"
+        "observacao"
     ];
 }
 

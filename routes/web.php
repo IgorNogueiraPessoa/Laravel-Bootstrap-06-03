@@ -22,12 +22,11 @@ Route::get('/form', function () {
     return view('form');
 });
 
-Route::get('/list', function () {
-    return view('list');
-});
+
 
 Route::get("/", [ContatoController::class, "index"]);
 Route::post("/adicionarContato", [ContatoController::class, "adicionar"]);
 Route::get("/editar/{id}", [ContatoController::class, "editar"]);
-Route::get("/atualizar/{id}", [ContatoController::class, "atualizar"]);
+Route::post("/atualizar/{id}", [ContatoController::class, "atualizar"]);
 Route::get("/excluir/{id}", [ContatoController::class, "excluir"]);
+Route::get("/list", [ContatoController::class, "listar"]);

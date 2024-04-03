@@ -42,7 +42,7 @@
  
             <div class="row">
                 <div class="mb-3">
-                <form method="POST" action="/atualizar/{{$contato->id}}">
+                <form method="post" action="/atualizar/{{$contato->id}}">
                  @csrf
                     <label for="exampleFormControlInput1" class="form-label">Nome:</label>
                     <input type="text" class="form-control" name="nome" value="{{$contato->nome}}">
@@ -57,7 +57,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Data de contato:</label>
                     <input type="date" class="form-control" name="data_contato" value="{{$contato->data_contato}}">
                     <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
-                    <textarea class="form-control" name="observação" rows="3" value="{{$contato->observação}}"></textarea>
+                    <textarea class="form-control" name="observacao" rows="3" value="">{{$contato->observacao}}</textarea>
  
                 </div>
             </div>
