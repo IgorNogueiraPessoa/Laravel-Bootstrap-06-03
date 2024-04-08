@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("telefone");
             $table->string("origem");
             $table->string("data_contato");
-            $table->string("observação");
+            $table->string("observacao");
             $table->timestamps();
         });
     }
