@@ -24,8 +24,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link" href="#">Cadastrar</a>
-                                <a class="nav-link" href="#">Consultar</a>
+                                <a class="nav-link" href="/form">Cadastrar</a>
+                                <a class="nav-link" href="/list">Consultar</a>
                             </div>
                         </div>
                     </div>

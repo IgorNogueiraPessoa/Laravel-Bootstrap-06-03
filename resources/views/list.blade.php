@@ -63,7 +63,7 @@
                                 <th>{{ $cont->telefone}}</th>
                                 <th>{{ $cont->origem }}</th>
                                 <th>{{ $cont->data_contato }}</th>
-                                <th>{{ $cont-> }}</th>
+                                <th>{{ $cont->observacao}}</th>
                                 <th><a href="/editar/{{ $cont->id }}" class="btn btn-primary">Editar</a>
                                     <a href="/excluir/{{ $cont->id }}" class="btn btn-danger">Excluir</a>
                                 </th>
